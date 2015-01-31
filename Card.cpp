@@ -38,11 +38,40 @@ void Card::Life(Point curr_point)
 
 Point Card::PuzzleDisplay(int ID, Point curr_points)
 {
-    if (ID == 1)
+    int choice;
+    Point points = curr_points;
+    if(ID == 1)
     {
+        cout << "You've entered the world as a newborn baby, just old enough to talk." << endl;
+        cout << "Your mother leans over you, trying to get you to say \"Mama\". You say " << endl;
+        cout << "1. ****" << endl;
+        cout << "2. Mama!" << endl;
+        cout << "3. Dada!" << endl;
+        cout << "4. You begin crying" << endl;
 
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.LifeIncrement(1);
+            points.EvilIncrement(1);
+        }
+        else if (choice == 2)
+        {
+            points.GoodIncrement(1);
+            points.LifeIncrement(1);
+        }
+        else if (choice == 3)
+        {
+            points.LifeIncrement(1);
+            points.GoodIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.LifeIncrement(1);
+        }
     }
 }
+
 
 Point Card::CrisisDisplay(int ID, Point curr_points)
 {
