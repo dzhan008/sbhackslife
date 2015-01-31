@@ -17,6 +17,8 @@ class Point
         void EvilIncrement(int);
         int displayLife() const;
         int displayDeath() const;
+        int displayGood() const;
+        int displayEvil() const;
         bool Alive();
         bool Dead();
 };

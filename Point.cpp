@@ -64,6 +64,14 @@ int Point::displayDeath() const
 {
     return death;
 }
+int Point::displayGood() const
+{
+    return good;
+}
+int Point::displayEvil() const
+{
+    return evil;
+}
 bool Point::Alive()
 {
     if(life >= 5)
