@@ -11,18 +11,50 @@ Point::Point()
 void Point::LifeIncrement(int inc)
 {
     life+=inc;
+    if(inc < 0)
+    {
+        std::cout << "You lost " << inc << ' ' << " life." << std::endl;
+    }
+    else
+    {
+        std::cout << "You gained " << inc << ' ' << " life." << std::endl;
+    }
 }
 void Point::DeathIncrement(int inc)
 {
     death+=inc;
+    if(inc < 0)
+    {
+        std::cout << "You lost " << inc << ' ' << " death." << std::endl;
+    }
+    else
+    {
+        std::cout << "You gained " << inc << ' ' << " death." << std::endl;
+    }
 }
 void Point::GoodIncrement(int inc)
 {
     good+=inc;
+    if(inc < 0)
+    {
+        std::cout << "You lost " << inc << ' ' << " good." << std::endl;
+    }
+    else
+    {
+        std::cout << "You gained " << inc << ' ' << " good" << std::endl;
+    }
 }
 void Point::EvilIncrement(int inc)
 {
     evil+=inc;
+    if(inc < 0)
+    {
+        std::cout << "You lost " << inc << ' ' << " evil." << std::endl;
+    }
+    else
+    {
+        std::cout << "You gained " << inc << ' ' << " evil." << std::endl;
+    }
 }
 int Point::displayLife() const
 {
