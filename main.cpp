@@ -3,17 +3,17 @@
 #include "Card.h"
 
 void menu();
+void initalizegame();
 
 int main()
 {
-    Card player;
-    Point p_points;
+
 
     std::cout << "Welcome to Life: The Simplified Version!" << std::endl;
 
     menu();
 
-    p_points = player.LifeDisplay(1, p_points);
+    /*p_points = player.LifeDisplay(1, p_points);
 
     std::cout << p_points.displayDeath() << std::endl;
     std::cout << p_points.displayEvil() << std::endl;
@@ -22,10 +22,7 @@ int main()
 
     p_points = player.LifeDisplay(1, p_points);
 
-    std::cout << p_points.displayDeath() << std::endl;
-    std::cout << p_points.displayEvil() << std::endl;
-    std::cout << p_points.displayGood() << std::endl;
-    std::cout << p_points.displayLife() << std::endl;
+*/
 
 
 
@@ -67,7 +64,7 @@ void menu()
     std::cin >> choice;
     if(choice == 1)
     {
-
+        initalizegame();
     }
     else if (choice == 2)
     {
@@ -78,7 +75,7 @@ void menu()
         std::cout << "Crisis - In times there are disasters or unforeseen events that need to be tend to ASAP." << std::endl;
         std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl << std::endl;
         std::cout << "Along with events comes with types of points you get with each decision you make." << std::endl;
-        std::cout << "Don't make too many bad decisions, or it's game over!" << endl;
+        std::cout << "Don't make too many bad decisions, or it's game over!" << std::endl;
 
         menu();
     }
@@ -86,5 +83,38 @@ void menu()
     {
         std::cout << "Thank you for playing!" << std::endl;
         return;
+    }
+}
+
+void initalizegame()
+{
+    int card;
+
+    Card player;
+    Point p_points;
+
+
+    while(!p_points.Dead()|| !p_points.Alive())
+    {
+        cout << "Drawing card..." << endl;
+        card = player.drawCard();
+
+        if(card == 1)
+        {
+            player.Puzzle(p_points);
+        }
+        else if(card == 2)
+        {
+            player.Crisis(p_points);
+        }
+        else if(card == 3)
+        {
+            player.Life(p_points);
+        }
+        std::cout << p_points.displayDeath() << std::endl;
+        std::cout << p_points.displayEvil() << std::endl;
+        std::cout << p_points.displayGood() << std::endl;
+        std::cout << p_points.displayLife() << std::endl;
+
     }
 }
