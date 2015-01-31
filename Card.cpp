@@ -70,6 +70,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
             points.LifeIncrement(1);
         }
     }
+    return points;
 }
 
 
