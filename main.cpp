@@ -9,8 +9,19 @@ int main()
     Card player;
     Point p_points;
 
-    p_points = player.LifeDisplay(1);
+    p_points = player.LifeDisplay(1, p_points);
 
+    cout << p_points.displayDeath() << endl;
+    cout << p_points.displayEvil() << endl;
+    cout << p_points.displayGood() << endl;
+    cout << p_points.displayLife() << endl;
+
+    p_points = player.LifeDisplay(1, p_points);
+
+    cout << p_points.displayDeath() << endl;
+    cout << p_points.displayEvil() << endl;
+    cout << p_points.displayGood() << endl;
+    cout << p_points.displayLife() << endl;
     //Card events. Add to class later
     /*Event: Your child has been borne! As you hold the screeching,
     plum-like little boy in your arms, he vomits on your face.

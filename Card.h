@@ -23,10 +23,10 @@ class Card
         int drawCard();
         void Puzzle();
         void Crisis();
-        void Life();
+        void Life(Point);
         void PuzzleDisplay(int);
         void CrisisDisplay(int);
-        Point LifeDisplay(int);
+        Point LifeDisplay (int, Point);
 
 
 

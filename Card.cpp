@@ -30,10 +30,10 @@ void Card::Crisis()
     CrisisDisplay(ID);
 }
 
-void Card::Life()
+void Card::Life(Point curr_point)
 {
     int ID = rand() % 10 + 1;
-    LifeDisplay(ID);
+    LifeDisplay(ID, curr_point);
 }
 
 void Card::PuzzleDisplay(int ID)
@@ -49,10 +49,10 @@ void Card::CrisisDisplay(int ID)
 
 }
 
-Point Card::LifeDisplay(int ID)
+Point Card::LifeDisplay (int ID, Point curr_points)
 {
     int choice;
-    Point points;
+    Point points = curr_points;
 
     if(ID == 1)
     {
