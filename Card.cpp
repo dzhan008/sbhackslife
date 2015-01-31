@@ -72,8 +72,13 @@ Point Card::CrisisDisplay(int ID, Point curr_points)
                     points.GoodIncrement(1);
                     points.LifeIncrement(1);
                 }
+                if(choice == 4)
+                {
+                    points.DeathIncrement(5);
+                }
 
     }
+    return points;
 }
 
 Point Card::LifeDisplay (int ID, Point curr_points)
