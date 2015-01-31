@@ -24,7 +24,7 @@ int main()
 
     std::cout << p_points.displayDeath() << std::endl;
     std::cout << p_points.displayEvil() << std::endl;
-    std::cout << p_points.displayGood() < std::endl;
+    std::cout << p_points.displayGood() << std::endl;
     std::cout << p_points.displayLife() << std::endl;
 
 
@@ -85,6 +85,6 @@ void menu()
     else if (choice == 3)
     {
         std::cout << "Thank you for playing!" << std::endl;
-        return 0;
+        return;
     }
 }

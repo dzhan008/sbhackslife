@@ -20,11 +20,11 @@ class Card
 
     public:
         Card();
-        int drawCard(Point);
+        int drawCard();
         void Puzzle(Point);
         void Crisis(Point);
         void Life(Point);
-        Point PuzzleDisplay(int);
+        Point PuzzleDisplay(int, Point);
         Point CrisisDisplay(int, Point);
         Point LifeDisplay (int, Point);
 
