@@ -44,9 +44,36 @@ void Card::PuzzleDisplay(int ID)
     }
 }
 
-void Card::CrisisDisplay(int ID)
+void Card::CrisisDisplay(int ID, Point curr_points)
 {
+    int choice;
+    Point points = curr_points;
+    if(ID == 1)
+    {
+        /*Crisis:*/ std::cout << "As you come home you notice your house is in flames. What do you do? Answer quickly!\n";
+        /*Choices: */std::cout << "1: Save your family trapped inside!!\n"; //(+Death, +2 Good)
+                std::cout << "2: Run away from your family trapped inside!!\n"; //(+Life, + Evil)
 
+                std::cout << "3: Run around laughing because your house and health is insured.\n"; //(+Good +Life)
+                std::cout << "4: Run into flames in a wild panic\n"; //(+5 Death)
+                cin >> choice;
+                if(choice == 1)
+                {
+                    points.DeathIncrement(1);
+                    points.GoodIncrement(2);
+                }
+                if(choice == 2)
+                {
+                    points.LifeIncrement(1);
+                    points.EvilIncrement(1);
+                }
+                if(choice == 3)
+                {
+                    points.GoodIncrement(1);
+                    points.LifeIncrement(1);
+                }
+
+    }
 }
 
 Point Card::LifeDisplay (int ID, Point curr_points)
@@ -81,6 +108,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.GoodIncrement(1);
         }
     }
+
 
     return points;
 }

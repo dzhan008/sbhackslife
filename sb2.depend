@@ -6,7 +6,7 @@
 	<cstdlib>
 	<time.h>
 
-1422740328 c:\users\studentd\documents\github\sbhackslife\card.h
+1422744231 c:\users\studentd\documents\github\sbhackslife\card.h
 	"Point.h"
 	<string>
 
@@ -17,7 +17,7 @@
 	"Point.h"
 	"Card.h"
 
-1422740328 source:c:\users\studentd\documents\github\sbhackslife\point.cpp
+1422741467 source:c:\users\studentd\documents\github\sbhackslife\point.cpp
 	"Point.h"
 	<iostream>
 
