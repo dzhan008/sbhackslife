@@ -98,7 +98,7 @@ void initalizegame()
     Point p_points;
 
 
-    while(!p_points.Dead()|| p_points.Alive())
+    while(!p_points.Dead()|| !p_points.Alive())
     {
         cout << "Drawing card..." << endl;
         card = player.drawCard();
