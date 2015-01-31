@@ -24,8 +24,8 @@ class Card
         void Puzzle(Point);
         void Crisis(Point);
         void Life(Point);
-        void PuzzleDisplay(int);
-        void CrisisDisplay(int, Point);
+        Point PuzzleDisplay(int);
+        Point CrisisDisplay(int, Point);
         Point LifeDisplay (int, Point);
 
 

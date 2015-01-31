@@ -36,7 +36,7 @@ void Card::Life(Point curr_point)
     LifeDisplay(ID, curr_point);
 }
 
-void Card::PuzzleDisplay(int ID)
+Point Card::PuzzleDisplay(int ID)
 {
     if (ID == 1)
     {
@@ -44,7 +44,7 @@ void Card::PuzzleDisplay(int ID)
     }
 }
 
-void Card::CrisisDisplay(int ID, Point curr_points)
+Point Card::CrisisDisplay(int ID, Point curr_points)
 {
     int choice;
     Point points = curr_points;
