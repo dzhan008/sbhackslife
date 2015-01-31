@@ -20,9 +20,9 @@ class Card
 
     public:
         Card();
-        int drawCard();
-        void Puzzle();
-        void Crisis();
+        int drawCard(Point);
+        void Puzzle(Point);
+        void Crisis(Point);
         void Life(Point);
         void PuzzleDisplay(int);
         void CrisisDisplay(int, Point);

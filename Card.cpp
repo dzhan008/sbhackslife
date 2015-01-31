@@ -18,16 +18,16 @@ int Card::drawCard()
 
 }
 
-void Card::Puzzle()
+void Card::Puzzle(Point curr_point)
 {
     int ID = rand() % 10 + 1;
-    PuzzleDisplay(ID);
+    PuzzleDisplay(ID, curr_point);
 }
 
-void Card::Crisis()
+void Card::Crisis(Point curr_point)
 {
     int ID = rand() % 10 + 1;
-    CrisisDisplay(ID);
+    CrisisDisplay(ID, curr_point);
 }
 
 void Card::Life(Point curr_point)
