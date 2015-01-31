@@ -11,8 +11,7 @@ int main()
 
     std::cout << "Welcome to Life: The Simplified Version!" << std::endl;
 
-
-
+    menu();
 
     p_points = player.LifeDisplay(1, p_points);
 
@@ -27,9 +26,6 @@ int main()
     std::cout << p_points.displayEvil() << std::endl;
     std::cout << p_points.displayGood() < std::endl;
     std::cout << p_points.displayLife() << std::endl;
-
-
-
 
 
 
@@ -80,9 +76,11 @@ void menu()
         std::cout << "will draw cards that will be based on a specific event. There are three types of events:" << std::endl;
         std::cout << "Puzzles - Life can be confusing, and you will be faced with solving problems to progress." << std::endl;
         std::cout << "Crisis - In times there are disasters or unforeseen events that need to be tend to ASAP." << std::endl;
-        std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl;
-        std::cout << "Along with events comes with types of points you get with each decision you make." << std:: endl;
-        std::cout << ""
+        std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl << std::endl;
+        std::cout << "Along with events comes with types of points you get with each decision you make." << std::endl;
+        std::cout << "Don't make too many bad decisions, or it's game over!" << endl;
+
+        menu();
     }
     else if (choice == 3)
     {
