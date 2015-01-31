@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1422740328 source:c:\users\studentd\documents\github\sbhackslife\card.cpp
+1422744337 source:c:\users\studentd\documents\github\sbhackslife\card.cpp
 	"Card.h"
 	"Point.h"
 	<iostream>
 	<cstdlib>
 	<time.h>
 
-1422744231 c:\users\studentd\documents\github\sbhackslife\card.h
+1422744337 c:\users\studentd\documents\github\sbhackslife\card.h
 	"Point.h"
 	<string>
 
