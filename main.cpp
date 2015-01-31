@@ -2,26 +2,37 @@
 #include "Point.h"
 #include "Card.h"
 
-using namespace std;
+void menu();
 
 int main()
 {
     Card player;
     Point p_points;
 
-    p_points = player.LifeDisplay(1, p_points);
+    std::cout << "Welcome to Life: The Simplified Version!" << std::endl;
 
-    cout << p_points.displayDeath() << endl;
-    cout << p_points.displayEvil() << endl;
-    cout << p_points.displayGood() << endl;
-    cout << p_points.displayLife() << endl;
+
+
 
     p_points = player.LifeDisplay(1, p_points);
 
-    cout << p_points.displayDeath() << endl;
-    cout << p_points.displayEvil() << endl;
-    cout << p_points.displayGood() << endl;
-    cout << p_points.displayLife() << endl;
+    std::cout << p_points.displayDeath() << std::endl;
+    std::cout << p_points.displayEvil() << std::endl;
+    std::cout << p_points.displayGood() << std::endl;
+    std::cout << p_points.displayLife() << std::endl;
+
+    p_points = player.LifeDisplay(1, p_points);
+
+    std::cout << p_points.displayDeath() << std::endl;
+    std::cout << p_points.displayEvil() << std::endl;
+    std::cout << p_points.displayGood() < std::endl;
+    std::cout << p_points.displayLife() << std::endl;
+
+
+
+
+
+
     //Card events. Add to class later
     /*Event: Your child has been borne! As you hold the screeching,
     plum-like little boy in your arms, he vomits on your face.
@@ -47,4 +58,35 @@ int main()
                 probably cheating others into the death they didn't deserve.
         if(evil > 3 && death >=5): It's a good thing you died, you terrible terrible person. */
     return 0;
+}
+
+void menu()
+{
+    int choice;
+
+    std::cout << "What would you like to do?" << std::endl;
+    std::cout << "1. Play" << std::endl;
+    std::cout << "2. Instructions" <<std::endl;
+    std::cout << "3. Exit" << std::endl;
+    std::cin >> choice;
+    if(choice == 1)
+    {
+
+    }
+    else if (choice == 2)
+    {
+        std::cout << "Welcome to the game of life! Here you will make intricate and nerve-raking decisions" << std::endl;
+        std::cout << "that will decide how your path of life will go! How does this work you say? Well, you" << std::endl;
+        std::cout << "will draw cards that will be based on a specific event. There are three types of events:" << std::endl;
+        std::cout << "Puzzles - Life can be confusing, and you will be faced with solving problems to progress." << std::endl;
+        std::cout << "Crisis - In times there are disasters or unforeseen events that need to be tend to ASAP." << std::endl;
+        std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl;
+        std::cout << "Along with events comes with types of points you get with each decision you make." << std:: endl;
+        std::cout << ""
+    }
+    else if (choice == 3)
+    {
+        std::cout << "Thank you for playing!" << std::endl;
+        return 0;
+    }
 }
