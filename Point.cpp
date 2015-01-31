@@ -58,18 +58,22 @@ void Point::EvilIncrement(int inc)
 }
 int Point::displayLife() const
 {
+    std::cout << "Life: ";
     return life;
 }
 int Point::displayDeath() const
 {
+    std::cout << "Death: ";
     return death;
 }
 int Point::displayGood() const
 {
+    std::cout << "Good: ";
     return good;
 }
 int Point::displayEvil() const
 {
+    std::cout << "Evil: ";
     return evil;
 }
 bool Point::Alive()
