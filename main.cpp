@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Point.h"
 #include "Card.h"
+#include <time.h>
+#include <ctime>
+#include <cstdlib>
 
 void menu();
 void initalizegame();
@@ -56,6 +59,7 @@ int main()
 void menu()
 {
     int choice;
+    srand(time(0));
 
     std::cout << "What would you like to do?" << std::endl;
     std::cout << "1. Play" << std::endl;
@@ -94,22 +98,24 @@ void initalizegame()
     Point p_points;
 
 
-    while(!p_points.Dead()|| !p_points.Alive())
+    while(!p_points.Dead()|| p_points.Alive())
     {
         cout << "Drawing card..." << endl;
         card = player.drawCard();
 
         if(card == 1)
         {
-            player.Puzzle(p_points);
+            p_points = player.Puzzle(p_points);
+
         }
         else if(card == 2)
         {
-            player.Crisis(p_points);
+            p_points = player.Crisis(p_points);
         }
         else if(card == 3)
         {
-            player.Life(p_points);
+
+            p_points = player.Life(p_points);
         }
         std::cout << p_points.displayDeath() << std::endl;
         std::cout << p_points.displayEvil() << std::endl;

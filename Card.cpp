@@ -12,28 +12,29 @@ Card::Card()
 
 int Card::drawCard()
 {
-    time(0);
-
     return rand() % 3 + 1;
 
 }
 
-void Card::Puzzle(Point curr_point)
+Point Card::Puzzle(Point curr_point)
 {
     int ID = rand() % 10 + 1;
-    PuzzleDisplay(ID, curr_point);
+    curr_point = PuzzleDisplay(ID, curr_point);
+    return curr_point;
 }
 
-void Card::Crisis(Point curr_point)
+Point Card::Crisis(Point curr_point)
 {
     int ID = rand() % 10 + 1;
-    CrisisDisplay(ID, curr_point);
+    curr_point = CrisisDisplay(ID, curr_point);
+    return curr_point;
 }
 
-void Card::Life(Point curr_point)
+Point Card::Life(Point curr_point)
 {
     int ID = rand() % 10 + 1;
-    LifeDisplay(ID, curr_point);
+    curr_point = LifeDisplay(ID, curr_point);
+    return curr_point;
 }
 
 Point Card::PuzzleDisplay(int ID, Point curr_points)
@@ -74,7 +75,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
 }
 
 
-Point Card::CrisisDisplay(int ID, Point curr_points)
+Point Card::CrisisDisplay(int ID, Point  curr_points)
 {
     int choice;
     Point points = curr_points;
