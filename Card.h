@@ -1,5 +1,6 @@
 #ifndef CARD_CPP_H
 #define CARD_CPP_H
+#include "Point.h"
 #include <string>
 
 using namespace std;
@@ -23,8 +24,9 @@ class Card
         void Puzzle();
         void Crisis();
         void Life();
-
-
+        void PuzzleDisplay(int);
+        void CrisisDisplay(int);
+        Point LifeDisplay(int);
 
 
 

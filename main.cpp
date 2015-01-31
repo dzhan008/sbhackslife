@@ -1,9 +1,16 @@
 #include <iostream>
 #include "Point.h"
+#include "Card.h"
+
 using namespace std;
 
 int main()
 {
+    Card player;
+    Point p_points;
+
+    p_points = player.LifeDisplay(1);
+
     //Card events. Add to class later
     /*Event: Your child has been borne! As you hold the screeching,
     plum-like little boy in your arms, he vomits on your face.

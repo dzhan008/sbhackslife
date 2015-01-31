@@ -41,7 +41,7 @@ void Point::GoodIncrement(int inc)
     }
     else
     {
-        std::cout << "You gained " << inc << ' ' << " good" << std::endl;
+        std::cout << "You gained " << inc << ' ' << " good." << std::endl;
     }
 }
 void Point::EvilIncrement(int inc)
