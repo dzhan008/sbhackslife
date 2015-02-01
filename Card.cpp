@@ -19,7 +19,7 @@ int Card::drawCard()
 
 Point Card::Puzzle(Point curr_point)
 {
-    int ID = rand() % 5 + 1;
+    int ID = rand() % 10 + 1;
     if(!cardcheck(puzzlecheck, ID))
     {
         std::cout << "Drawing card..." << std::endl;
@@ -34,7 +34,7 @@ Point Card::Puzzle(Point curr_point)
 
 Point Card::Crisis(Point curr_point)
 {
-    int ID = rand() % 5 + 1;
+    int ID = rand() % 8 + 1;
     if(!cardcheck(crisischeck, ID))
     {
         std::cout << "Drawing card..." << std::endl;
@@ -50,7 +50,7 @@ Point Card::Crisis(Point curr_point)
 Point Card::Life(Point curr_point)
 {
 
-    int ID = rand() % 5 + 1;
+    int ID = rand() % 7 + 1;
     if(!cardcheck(lifecheck, ID))
     {
         std::cout << "Drawing card..." << std::endl;
@@ -295,6 +295,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
         {
             points.DeathIncrement(1);
         }
+    }
     if(ID == 9)
     {
         std::cout << "The bully on the street decides to pick on you today. You: " << std::endl;
@@ -324,7 +325,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
     }
     if (ID == 10)
     {
-        std::cout << "Two of your good friends are fighting. It seems pretty intense. What do you do?" std::endl;
+        std::cout << "Two of your good friends are fighting. It seems pretty intense. What do you do?" << std::endl;
         std::cout << "1. Talk to them one at a time. It's nice to see both sides of the problem." << std::endl;
         std::cout << "2. Yell at both of them, explaining their faults and how stupid they are." << std::endl;
         std::cout << "3. Do I look like a therapist to you?" << std::endl;
@@ -351,7 +352,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
 
     }
 
-    }
+
     return points;
 }
 
@@ -638,7 +639,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
     if(ID == 1)
     {
         std::cout << "It's your first day of school and you've met a really nice girl-your first friend!" << endl;
-        std::cout << "You're want to play with her! What to do though?" << endl;
+        std::cout << "You want to play with her! What to do though?" << endl;
         std::cout << "1. Play in the mud with the bugs! Girls never do that, maybe she'll like it!" << endl;
         std::cout << "2. Spend the recess doing stuff she likes!" << std::endl;
         std::cout << "3. Prank her! Spit gum in her hair while she's not looking. That'll crack everyone up." << std::endl;
@@ -806,6 +807,30 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.DeathIncrement(1);
         }
 
+    }
+    if (ID == 7)
+    {
+        std::cout << "As a little kid, you took a keen eye towards toys. There was one you" << std::endl;
+        std::cout << "especially liked. What would you do about it?" << std::endl;
+        std::cout << "1. Ask politely for the toy. Maybe I'll get it if I'm nice!" << std::endl;
+        std::cout << "2. Steal it. Who says I knew that was bad to do back then?" << std::endl;
+        std::cout << "3. MOM I WANT IT I WANT IT I WANT ITTTTTTTTTTT!" << std::endl;
+
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.LifeIncrement(1);
+            points.GoodIncrement(1);
+        }
+        else if (choice == 2)
+        {
+            points.DeathIncrement(1);
+            points.EvilIncrement(2);
+        }
+        else if (choice == 3)
+        {
+            points.EvilIncrement(4);
+        }
     }
 
     return points;

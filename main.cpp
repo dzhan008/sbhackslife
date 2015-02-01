@@ -67,7 +67,7 @@ void menu()
 void initalizegame()
 {
     int card;
-    int MAX_COUNTER = 22;
+    int MAX_COUNTER = 25;
 
     Card player;
     Point p_points;
@@ -112,7 +112,7 @@ void initalizegame()
     std::cout << p_points.displayDeath() << std::endl;
     std::cout << p_points.displayEvil() << std::endl;
     std::cout << p_points.displayGood() << std::endl;
-    std::cout << p_points.displayLife() << std::endl;
+    std::cout << p_points.displayLife() << std::endl << std::endl;
 
     p_points.Ending();
 
