@@ -12,7 +12,7 @@ int main()
 {
 
 
-    std::cout << "Welcome to Life: The Simplified Version!" << std::endl;
+    std::cout << "Welcome to Play the Choices!" << std::endl;
 
     menu();
 
@@ -45,14 +45,15 @@ void menu()
     }
     else if (choice == 2)
     {
-        std::cout << "Welcome to the game of life! Here you will make intricate and nerve-raking decisions" << std::endl;
-        std::cout << "that will decide how your path of life will go! How does this work you say? Well, you" << std::endl;
-        std::cout << "will draw cards that will be based on a specific event. There are three types of events:" << std::endl;
-        std::cout << "Puzzles - Life can be confusing, and you will be faced with solving problems to progress." << std::endl;
-        std::cout << "Crisis - In times there are disasters or unforeseen events that need to be tend to ASAP." << std::endl;
-        std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl << std::endl;
-        std::cout << "Along with events comes with types of points you get with each decision you make." << std::endl;
-        std::cout << "Don't make too many bad decisions, or it's game over!" << std::endl;
+        std::cout << "Welcome to the game of life! Here you will make intricate and nerve-raking " << std::endl;
+        std::cout << "decisions that will decide how your path of life will go! How does this work " << std::endl;
+        std::cout << "you say? Well, you will draw cards that will be based on a specific " << std::endl;
+        std::cout << "event. There are three types of events:" << std::endl << std::endl;
+        std::cout << "Puzzles - Life can be confusing, and you will be faced with solving problems to progress." << std::endl << std::endl;
+        std::cout << "Crisis - In times there are disasters or unforeseen events that need to be tend to ASAP." << std::endl << std::endl;
+        std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl << std::endl << std::endl;
+        std::cout << "Along with events comes with points you get with each decision you make." << std::endl;
+        std::cout << "Don't make too many bad decisions, or it's game over!" << std::endl << std::endl;
 
         menu();
     }
@@ -87,8 +88,11 @@ void initalizegame()
         }
         else if(card == 3)
         {
-
             p_points = player.Life(p_points);
+        }
+        if(p_points.getCounter() == 3)
+        {
+            p_points.Ending();
         }
     }
     std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;

@@ -19,11 +19,17 @@ int Card::drawCard()
 
 Point Card::Puzzle(Point curr_point)
 {
+    Point incr;
     int ID = rand() % 5 + 1;
     if(!cardcheck(puzzlecheck, ID))
     {
         curr_point = PuzzleDisplay(ID, curr_point);
         puzzlecheck.push_back(ID);
+    }
+    if(puzzlecheck.size() == 5)
+    {
+        incr.CheckScenario(1);
+        return incr;
     }
 
     return curr_point;
@@ -31,22 +37,34 @@ Point Card::Puzzle(Point curr_point)
 
 Point Card::Crisis(Point curr_point)
 {
+    Point incr;
     int ID = rand() % 5 + 1;
     if(!cardcheck(crisischeck, ID))
     {
         curr_point = CrisisDisplay(ID, curr_point);
         crisischeck.push_back(ID);
     }
+    if(crisischeck.size() == 5)
+    {
+        incr.CheckScenario(1);
+        return incr;
+    }
     return curr_point;
 }
 
 Point Card::Life(Point curr_point)
 {
+    Point incr;
     int ID = rand() % 5 + 1;
     if(!cardcheck(lifecheck, ID))
     {
         curr_point = LifeDisplay(ID, curr_point);
         lifecheck.push_back(ID);
+    }
+    if(lifecheck.size() == 5)
+    {
+        incr.CheckScenario(1);
+        return incr;
     }
     return curr_point;
 }

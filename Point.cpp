@@ -93,7 +93,18 @@ bool Point::Dead()
     return false;
 }
 
-void Point::Ending()
+void Point::CheckScenario(int counter1)
+{
+    counter += counter1;
+}
+
+int Point::getCounter() const
+{
+    return counter;
+}
+
+
+int Point::Ending()
 {
     if (good > 3 && life >= 5)
     {
@@ -113,5 +124,7 @@ void Point::Ending()
     {
         std::cout << "It's a good thing you died, you terrible, terrible person." << std::endl;
     }
+
+    return 0;
 
 }
