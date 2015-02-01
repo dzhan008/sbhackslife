@@ -71,7 +71,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
             points.LifeIncrement(1);
         }
     }
-    if(ID == 1)
+    if(ID == 2)
     {
         std::cout << "Your teacher calls you up to do this math problem. What is 1 + 1?" << std::endl;
         std::cout << "1. TWOOOOOOOOOOOOOO!" << std::endl;
@@ -194,6 +194,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.GoodIncrement(1);
         }
     }
+
 
 
     return points;
