@@ -239,6 +239,32 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
             points.GoodIncrement(1);
         }
     }
+    if (ID == 3)
+    {
+        std::cout << "You are on a honeymoon. You see the most beautiful person. What do you do?\n";
+        //std::cout << "\n";
+        std::cout << "1: Stay faithful. Till Death do us part.\n";
+        std::cout << "2: Death does do us part. Indeed.\n";
+        std::cout << "3: Cheat.\n";
+        std::cout << "4: Invite for a hot night together, the three of us.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(2);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(5);
+        }
+        else if(choice == 3)
+        {
+            points.DeathIncrement(2);
+        }
+        else if (choice == 4)
+        {
+            points.LifeIncrement(1);
+        }
+    }
     return points;
 }
 
