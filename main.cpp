@@ -10,8 +10,6 @@ void initalizegame();
 
 int main()
 {
-
-
     std::cout << "Welcome to Judgement Day." << std::endl;
     std::cout << "SBHacks Version 1.0." << std::endl << std::endl;
 
