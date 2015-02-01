@@ -305,6 +305,35 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.EvilIncrement(2);
         }
     }
+       else if (ID == 4)
+        {
+            std::cout << "You are going for that job interview you've always wanted." << std::endl;
+            std::cout << "This is your chance to impress your employer and take a great" << std::endl;
+            std::cout << "opportunity. You: " << std::endl;
+            std::cout << "1. Go through the job interview normally." << std::endl;
+            std::cout << "2. Act extremely stuck-up, hoping your aristocratic act gets you anywhere." << std::endl;
+            std::cout << "3. Got the rope and duct tape ready." << std::endl;
+
+            cin >> choice;
+
+            if(choice == 1)
+            {
+                points.GoodIncrement(2);
+            }
+            else if (choice == 2)
+            {
+                points.displayEvil(2);
+            }
+            else if (choice == 3)
+            {
+                points.displayDeath(1);
+                points.displayEvil(2);
+            }
+        }
+        else if (ID == 5)
+        {
+
+        }
 
 
 
