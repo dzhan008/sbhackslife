@@ -12,7 +12,7 @@ int main()
 {
 
 
-    std::cout << "Welcome to Life: The Simplified Version!" << std::endl;
+    std::cout << "Welcome to the Judgement Day!" << std::endl;
 
     menu();
 
@@ -86,7 +86,7 @@ void initalizegame()
         }
         else if(card == 3)
         {
-<<<<<<< HEAD
+
             p_points = player.Life(p_points);
         }
         int i = p_points.getCounter();
@@ -101,11 +101,11 @@ void initalizegame()
             p_points.Ending();
             return;
         }
-=======
+
 
             p_points = player.Life(p_points);
         }
->>>>>>> origin/master
+
     }
     std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;
     std::cout << p_points.displayDeath() << std::endl;
