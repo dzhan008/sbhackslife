@@ -725,6 +725,33 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.EvilIncrement(1);
         }
     }
+    if(ID == 6)
+    {
+        std::cout << "You started working as an adult. Your pay is average and the job is not unbearable.\n";
+        std::cout << "\n";
+        std::cout << "1: Work diligently. Good things will come eventually.\n";
+        std::cout << "2: Ambition is the path to success.\n";
+        std::cout << "3: Secretly plan a hostile takeover. \n";
+        std::cout << "4: Work sucks. Quit your job.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
 
     return points;
 }
