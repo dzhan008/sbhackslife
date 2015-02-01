@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <vector>
 
 Card::Card()
 {
@@ -18,23 +19,67 @@ int Card::drawCard()
 
 Point Card::Puzzle(Point curr_point)
 {
+    Point incr;
     int ID = rand() % 5 + 1;
-    curr_point = PuzzleDisplay(ID, curr_point);
+    if(!cardcheck(puzzlecheck, ID))
+    {
+        curr_point = PuzzleDisplay(ID, curr_point);
+        puzzlecheck.push_back(ID);
+    }
+    if(puzzlecheck.size() == 5)
+    {
+        incr.CheckScenario(1);
+        return incr;
+    }
+
     return curr_point;
 }
 
 Point Card::Crisis(Point curr_point)
 {
+    Point incr;
     int ID = rand() % 5 + 1;
-    curr_point = CrisisDisplay(ID, curr_point);
+    if(!cardcheck(crisischeck, ID))
+    {
+        curr_point = CrisisDisplay(ID, curr_point);
+        crisischeck.push_back(ID);
+    }
+    if(crisischeck.size() == 5)
+    {
+        incr.CheckScenario(1);
+        return incr;
+    }
     return curr_point;
 }
 
 Point Card::Life(Point curr_point)
 {
+    Point incr;
     int ID = rand() % 5 + 1;
-    curr_point = LifeDisplay(ID, curr_point);
+    if(!cardcheck(lifecheck, ID))
+    {
+        curr_point = LifeDisplay(ID, curr_point);
+        lifecheck.push_back(ID);
+    }
+    if(lifecheck.size() == 5)
+    {
+        incr.CheckScenario(1);
+        return incr;
+    }
     return curr_point;
+}
+
+bool Card::cardcheck(vector<int> IDs, int ID)
+{
+    for(int i = 0; i < IDs.size(); ++i)
+    {
+        if(IDs.at(i) == ID)
+        {
+            return true;
+        }
+    }
+    return false;
+
 }
 
 Point Card::PuzzleDisplay(int ID, Point curr_points)
@@ -393,6 +438,10 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.DeathIncrement(1);
             points.EvilIncrement(2);
             points.GoodIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.EvilIncrement(1);
         }
     }
     else if(ID == 4)

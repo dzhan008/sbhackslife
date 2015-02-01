@@ -2,6 +2,7 @@
 #define CARD_CPP_H
 #include "Point.h"
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -17,6 +18,10 @@ class Card
 
     };
 
+    vector<int>puzzlecheck;
+    vector<int>crisischeck;
+    vector<int>lifecheck;
+
 
     public:
         Card();
@@ -27,6 +32,7 @@ class Card
         Point PuzzleDisplay(int, Point);
         Point CrisisDisplay(int, Point);
         Point LifeDisplay (int, Point);
+        bool cardcheck(vector<int>, int);
 
 
 
