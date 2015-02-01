@@ -213,6 +213,87 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
         }
 
     }
+    if(ID == 6)
+    {
+        std::cout << "At the party, you ask yourself: How am I gonna get some.....\n";
+        std::cout << "\n";
+        std::cout << "1: Snacks\n";
+        std::cout << "2: You know what. \n";
+        std::cout << "3: Drugs\n";
+        std::cout << "4: Drinks ;D\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
+    if(ID == 7)
+    {
+        std::cout << "How did I get up early for things? \n";
+        std::cout << "\n";
+        std::cout << "1: Through sheer force of will.\n";
+        std::cout << "2: Alarms. A lot of them.\n";
+        std::cout << "3: Mom threw me off my bed.\n";
+        std::cout << "4: When the urge to pee overcame the comfort of bed.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
+    if(ID == 8)
+    {
+        std::cout << "You found a winning lottery ticket on the ground. You notice a homeless man crawling on the ground looking for something.\n";
+        std::cout << "He seems desperate.\n";
+        std::cout << "1: Claim the prize, but secretly give him half.\n";
+        std::cout << "2: Give him the ticket.\n";
+        std::cout << "3: Keep everything for yourself....dick.\n";
+        std::cout << "4: Ticket's probably a fake. Rip.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
     return points;
 }
 
