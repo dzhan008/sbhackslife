@@ -6,16 +6,19 @@
 	<cstdlib>
 	<time.h>
 
-1422744337 c:\users\studentd\documents\github\sbhackslife\card.h
+1422747148 c:\users\studentd\documents\github\sbhackslife\card.h
 	"Point.h"
 	<string>
 
 1422740328 c:\users\studentd\documents\github\sbhackslife\point.h
 
-1422740328 source:c:\users\studentd\documents\github\sbhackslife\main.cpp
+1422753187 source:c:\users\studentd\documents\github\sbhackslife\main.cpp
 	<iostream>
 	"Point.h"
 	"Card.h"
+	<time.h>
+	<ctime>
+	<cstdlib>
 
 1422741467 source:c:\users\studentd\documents\github\sbhackslife\point.cpp
 	"Point.h"

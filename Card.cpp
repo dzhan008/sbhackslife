@@ -98,6 +98,32 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
             points.DeathIncrement(1);
         }
     }
+    if(ID == 3)
+    {
+        std::cout << "Philosophy professor gives final exam: Why is life so hard?\n";
+        std::cout << "1: Because the struggle is life.\n";
+        std::cout << "2: Life is easy you're stupid.\n";
+        std::cout << "3: Life is but a series of choices: People like making bad ones.\n";
+        std::cout << "4: Life sucks d**k, but never mine.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(2);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.LifeIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(2);
+        }
+
+    }
     return points;
 }
 
