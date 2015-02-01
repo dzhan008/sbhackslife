@@ -15,6 +15,7 @@ class Point
         void DeathIncrement(int);
         void GoodIncrement(int);
         void EvilIncrement(int);
+        void Ending();
         int displayLife() const;
         int displayDeath() const;
         int displayGood() const;
