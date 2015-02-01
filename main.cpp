@@ -104,9 +104,8 @@ void initalizegame()
 
 
             p_points = player.Life(p_points);
-        }
-
     }
+
     std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;
     std::cout << p_points.displayDeath() << std::endl;
     std::cout << p_points.displayEvil() << std::endl;
@@ -115,6 +114,9 @@ void initalizegame()
 
     p_points.Ending();
 
+}
+
+
      /*
     ENDING:(occurs if life/death >= 5)
         if(good > 3 && life >= 5):  You didn't play this game correctly though. Play again and be more fun.
@@ -122,4 +124,6 @@ void initalizegame()
         if(evil > 3 && life >= 5):
         if(evil > 3 && death >=5): It's a good thing you died, you terrible terrible person. */
 
-}
+
+
+
