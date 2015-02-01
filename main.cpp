@@ -74,20 +74,23 @@ void initalizegame()
 
     while(!p_points.Dead()&& !p_points.Alive())
     {
-        std::cout << "Drawing card..." << std::endl;
+
         card = player.drawCard();
 
         if(card == 1)
         {
+            std::cout << "Drawing card..." << std::endl;
             p_points = player.Puzzle(p_points);
 
         }
         else if(card == 2)
         {
+            std::cout << "Drawing card..." << std::endl;
             p_points = player.Crisis(p_points);
         }
         else if(card == 3)
         {
+            std::cout << "Drawing card..." << std::endl;
             p_points = player.Life(p_points);
         }
         if(p_points.getCounter() == 3)

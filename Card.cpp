@@ -439,6 +439,10 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.EvilIncrement(2);
             points.GoodIncrement(1);
         }
+        else if (choice == 4)
+        {
+            points.EvilIncrement(1);
+        }
     }
     else if(ID == 4)
     {
