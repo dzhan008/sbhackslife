@@ -274,6 +274,37 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.GoodIncrement(1);
         }
     }
+        if(ID == 2)
+    {
+        cout << "You're getting your gray hairs now and it's time to retire." << endl;
+        cout << "You've worked at an office job and have made some good friends." << endl;
+        cout << "How do you want to leave your workplace?" << endl;
+        cout << "1. Enjoy the mediocre retirement party thrown by the boss and friends." << endl;
+        cout << "2. Go out with a bang-cursing your boss's slimy hide and trashing the office." << endl;
+        cout << "3. Make sure everyone you cared about remembers you well. " << endl;
+        cout << "4. Go on a violent rampage." << endl;
+
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if (choice == 2)
+        {
+            points.EvilIncrement(1);
+            points.LifeIncrement(1);
+        }
+        else if (choice == 3)
+        {
+            points.GoodIncrement(1);
+            points.LifeIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+            points.EvilIncrement(2);
+        }
+    }
 
 
 
