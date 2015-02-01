@@ -427,6 +427,151 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
             points.LifeIncrement(1);
         }
     }
+    if(ID == 6)
+    {
+        std::cout << "The person you've been crushing on finds out. Before their reaction turns sour you:\n";
+        std::cout << "\n";
+        std::cout << "1: Deny EVERYTHING!\n";
+        std::cout << "2: Courageously ask them out.\n";
+        std::cout << "3: Chloroform + rag = \n";
+        std::cout << "4: Avoid them.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
+    if(ID == 7)
+    {
+        std::cout << "On the streets someone challenged you to a race. The cops start pursuing both of you. \n";
+        std::cout << "\n";
+        std::cout << "1: Pull over and face Justice.\n";
+        std::cout << "2: Show the cops your Initial D.rift.\n";
+        std::cout << "3: Shove that asshole into the cops. \n";
+        std::cout << "4: Accelerate over 150 mph.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
+    if(ID == 8)
+    {
+        std::cout << "You are on the trial for the death of someone you knew.\n";
+        std::cout << "Your attorney is missing.\n";
+        std::cout << "1: Defend yourself.\n";
+        std::cout << "2: Hold out as long as you can.\n";
+        std::cout << "3: Steal the baliff's gun\n";
+        std::cout << "4: Make a run for it.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+
+            std::cout << "So you've decided to defend yourself. Your inadequate arguments fail to win the court over.\n";
+            std::cout << "The prosecution calls for a witness with evidence. \n";
+            std::cout << "1: Defend until the end.\n";
+            std::cout << "2: Call for your attorney.\n";
+            std::cout << "3: Destroy evidence.\n";
+            std::cout << "4: Admit Defeat.\n";
+            cin >> choice;
+            if(choice == 1)
+            {
+                points.GoodIncrement(1);
+                std::cout << "The court was moved by your one man stand.";
+                std::cout << "You didn't win but punishment was lessened by a lot.\n";
+            }
+            else if(choice == 2)
+            {
+                points.LifeIncrement(1);
+                std::cout << "Your attorney came, but too late you are already guilty. \n";
+            }
+            else if(choice == 3)
+            {
+                points.EvilIncrement(1);
+                cout << "Your crimes call for heavier punishment.\n";
+            }
+            else if (choice == 4)
+            {
+                points.DeathIncrement(1);
+                cout << "Life behind bars was pleasant. Jesus loves you..... literally.\n";
+            }
+
+
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+
+            std::cout << " You stalled the court a good hour. The prosecution is about to close your case.\n";
+            std::cout << "OBJECTION!! The ace attorney arrives.\n";
+            std::cout << "1: Explain the case to him.\n";
+            std::cout << "2: Believe in your attorney. \n";
+            std::cout << "3: Forge some evidence. Your attorney needs help.\n";
+            std::cout << "4: Remain silent.\n";
+            cin >> choice;
+            if(choice == 1)
+            {
+                points.GoodIncrement(1);
+                cout << "Your attorney has proven your innocence. Congratulations\n";
+            }
+            else if(choice == 2)
+            {
+                points.LifeIncrement(1);
+                cout << "Your attorney is badass.\n";
+            }
+            else if(choice == 3)
+            {
+                points.EvilIncrement(1);
+                cout << "You were found guilty. Your attorney was debarred because of you.\n";
+            }
+            else if (choice == 4)
+            {
+                points.DeathIncrement(1);
+                cout << "In the showers you fear for your life as your bar of soap fell to the floor.\n";
+            }
+
+
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(1);
+            cout << "You shot some people before the baliffs dogpiled you.\n";
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+            cout << "You made it out of the courthouse before someone decided to shoot you.\n";
+            cout << "You were in Texas by the way. \n";
+        }
+
+    }
     return points;
 }
 
