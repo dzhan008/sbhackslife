@@ -45,14 +45,14 @@ void menu()
     }
     else if (choice == 2)
     {
-        std::cout << "Welcome to the game of life! Here you will make intricate and nerve-raking decisions" << std::endl;
-        std::cout << "that will decide how your path of life will go! How does this work you say? Well, you" << std::endl;
-        std::cout << "will draw cards that will be based on a specific event. There are three types of events:" << std::endl;
-        std::cout << "Puzzles - Life can be confusing, and you will be faced with solving problems to progress." << std::endl;
-        std::cout << "Crisis - In times there are disasters or unforeseen events that need to be tend to ASAP." << std::endl;
-        std::cout << "Life Decision - This is self-explanatory, but we hope you have a good heart." << std::endl << std::endl;
-        std::cout << "Along with events comes with types of points you get with each decision you make." << std::endl;
-        std::cout << "Don't make too many bad decisions, or it's game over!" << std::endl;
+        std::cout << "Today was the day of your death. The story I tell today is not of how you died, or how you lived," << std::endl;
+        std::cout << "day in and day out. I do not need to know that. I know everything. I am everything." << std::endl;
+        std::cout << "You alone know what you did, how you lived your life...the decisions you were faced with" << std::endl;
+        std::cout << "and mistakes you made. If I were to make a judgement, and I do often, it would not be good for you." << std::endl;
+        std::cout << "But I see something in you too. You know what you did wrong, what you did right. And I've" << std::endl;
+        std::cout << "decided to give you a chance to change it. I'm going to let you go, you might feel like you're" << std::endl << std::endl;
+        std::cout << "falling. Try and make the right decisions this time, and when you're done we'll see how" << std::endl;
+        std::cout << "and where you really fall in this afterlife." << std::endl;
 
         menu();
     }
