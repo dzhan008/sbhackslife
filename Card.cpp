@@ -220,7 +220,7 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
     {
         std::cout << "You open a door for someone, but he passes by without even thanking you! What do you do?!" << std::endl;
         std::cout << "1. Forget about it. He was probably in a hurry." << std::endl;
-        std::cout << "2. Proceed to imagine fantastic scenes of retribution" << std::endl;
+        std::cout << "2. Hope that he will rue the day that he insulted your very existence." << std::endl;
         std::cout << "3. Yell at the man, approaching him with a stern face. Proceed to lecture him." << std::endl;
 
         std::cin >> choice;
