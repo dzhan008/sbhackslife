@@ -265,6 +265,58 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
             points.LifeIncrement(1);
         }
     }
+    if (ID == 4)
+    {
+        std::cout << "Loved ones taken hostage by ISIS. You are at a US missile base negotiating.\n";
+        //std::cout << "\n";
+        std::cout << "1: Give ISIS what they want in exchange for their safety.\n";
+        std::cout << "2: Their fault for going to the Middle East.\n";
+        std::cout << "3: Muricans don't negotiate with terrorists. Launch missiles!\n";
+        std::cout << "4: Travel to the Middle East lone wolf style.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(2);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(4);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+    }
+    if (ID == 5)
+    {
+        std::cout << "This is the final standoff with your rival. Only one will leave this alive.\n";
+        //std::cout << "\n";
+        std::cout << "1: Only thing left to do is win.\n";
+        std::cout << "2: Murder him, defile his corpse and return it to his family.\n";
+        std::cout << "3: Convince him to stop.\n";
+        std::cout << "4: Draw.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(3);
+        }
+        else if(choice == 3)
+        {
+            points.DeathIncrement(2);
+        }
+        else if (choice == 4)
+        {
+            points.LifeIncrement(1);
+        }
+    }
     return points;
 }
 
