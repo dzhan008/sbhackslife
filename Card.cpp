@@ -267,12 +267,10 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
     }
     if (ID == 4)
     {
-        std::cout << "Loved ones taken hostage by ISIS. You are at a US missile base negotiating.\n";
-        //std::cout << "\n";
-        std::cout << "1: Give ISIS what they want in exchange for their safety.\n";
-        std::cout << "2: Their fault for going to the Middle East.\n";
-        std::cout << "3: Muricans don't negotiate with terrorists. Launch missiles!\n";
-        std::cout << "4: Travel to the Middle East lone wolf style.\n";
+        std::cout << "You see a burglar steal a purse from an old lady. What do you do?" << std::endl;
+        std::cout << "1. \"Stop!\" you yelled, slowly running towards the sprinting robber." << std::endl;
+        std::cout << "2. Flee. He may come for you next." << std::endl;
+
         cin >> choice;
         if(choice == 1)
         {
@@ -280,16 +278,9 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
         }
         else if(choice == 2)
         {
-            points.EvilIncrement(2);
+            points.EvilIncrement(1);
         }
-        else if(choice == 3)
-        {
-            points.EvilIncrement(4);
-        }
-        else if (choice == 4)
-        {
-            points.DeathIncrement(1);
-        }
+
     }
     if (ID == 5)
     {
