@@ -124,6 +124,60 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
         }
 
     }
+    if(ID == 4)
+    {
+        std::cout << "You have graduated from high school and wonder where you will go.\n";
+        std::cout << "1: College because nothing can go wrong with higher education!\n";
+        std::cout << "2: Work as a garbageman or In N Out manager. Those pay well.\n";
+        std::cout << "3: I didn't choose the Thuglyfe the Thuglyfe chose me.\n";
+        std::cout << "4: Live in parent's basement.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(2);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.DeathIncrement(2);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
+    if(ID == 5)
+    {
+        std::cout << "You the last question of Who Wants to Be a Millionaire. \n";
+        std::cout << "How was the Universe believed to be made?\n";
+        std::cout << "1: God. Nonbelievers shall die in brimstone and hellfire!\n";
+        std::cout << "2: The Big Bang Theory. Not the show.\n";
+        std::cout << "3: The Big Bang. If you know what I mean. >u<  \n";
+        std::cout << "4: I don't know and neither do you.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+            points.LifeIncrement(-1);
+        }
+        else if(choice == 2)
+        {
+            points.LifeIncrement(2);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(2);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+
+    }
     return points;
 }
 

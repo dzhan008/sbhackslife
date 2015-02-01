@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1422744337 source:c:\users\studentd\documents\github\sbhackslife\card.cpp
+1422755422 source:c:\users\studentd\documents\github\sbhackslife\card.cpp
 	"Card.h"
 	"Point.h"
 	<iostream>
@@ -12,7 +12,7 @@
 
 1422740328 c:\users\studentd\documents\github\sbhackslife\point.h
 
-1422753187 source:c:\users\studentd\documents\github\sbhackslife\main.cpp
+1422754634 source:c:\users\studentd\documents\github\sbhackslife\main.cpp
 	<iostream>
 	"Point.h"
 	"Card.h"
