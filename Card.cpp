@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <vector>
 
 Card::Card()
 {
@@ -19,22 +20,48 @@ int Card::drawCard()
 Point Card::Puzzle(Point curr_point)
 {
     int ID = rand() % 5 + 1;
-    curr_point = PuzzleDisplay(ID, curr_point);
+    if(!cardcheck(puzzlecheck, ID))
+    {
+        curr_point = PuzzleDisplay(ID, curr_point);
+        puzzlecheck.push_back(ID);
+    }
+
     return curr_point;
 }
 
 Point Card::Crisis(Point curr_point)
 {
     int ID = rand() % 5 + 1;
-    curr_point = CrisisDisplay(ID, curr_point);
+    if(!cardcheck(crisischeck, ID))
+    {
+        curr_point = CrisisDisplay(ID, curr_point);
+        crisischeck.push_back(ID);
+    }
     return curr_point;
 }
 
 Point Card::Life(Point curr_point)
 {
     int ID = rand() % 5 + 1;
-    curr_point = LifeDisplay(ID, curr_point);
+    if(!cardcheck(lifecheck, ID))
+    {
+        curr_point = LifeDisplay(ID, curr_point);
+        lifecheck.push_back(ID);
+    }
     return curr_point;
+}
+
+bool Card::cardcheck(vector<int> IDs, int ID)
+{
+    for(int i = 0; i < IDs.size(); ++i)
+    {
+        if(IDs.at(i) == ID)
+        {
+            return true;
+        }
+    }
+    return false;
+
 }
 
 Point Card::PuzzleDisplay(int ID, Point curr_points)
