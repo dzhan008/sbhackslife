@@ -18,21 +18,21 @@ int Card::drawCard()
 
 Point Card::Puzzle(Point curr_point)
 {
-    int ID = rand() % 10 + 1;
+    int ID = rand() % 5 + 1;
     curr_point = PuzzleDisplay(ID, curr_point);
     return curr_point;
 }
 
 Point Card::Crisis(Point curr_point)
 {
-    int ID = rand() % 10 + 1;
+    int ID = rand() % 5 + 1;
     curr_point = CrisisDisplay(ID, curr_point);
     return curr_point;
 }
 
 Point Card::Life(Point curr_point)
 {
-    int ID = rand() % 10 + 1;
+    int ID = rand() % 5 + 1;
     curr_point = LifeDisplay(ID, curr_point);
     return curr_point;
 }
@@ -43,12 +43,12 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
     Point points = curr_points;
     if(ID == 1)
     {
-        cout << "You've entered the world as a newborn baby, just old enough to talk." << endl;
-        cout << "Your mother leans over you, trying to get you to say \"Mama\". You say " << endl;
-        cout << "1. Poop!" << endl;
-        cout << "2. Mama!" << endl;
-        cout << "3. Dada!" << endl;
-        cout << "4. You begin crying." << endl;
+        std::cout << "You've entered the world as a newborn baby, just old enough to talk." << std::endl;
+        std::cout << "Your mother leans over you, trying to get you to say \"Mama\". You say " << std::endl;
+        std::cout << "1. Poop!" << std::endl;
+        std::cout << "2. Mama!" << std::endl;
+        std::cout << "3. Dada!" << std::endl;
+        std::cout << "4. You begin crying." << std::endl;
 
         cin >> choice;
         if(choice == 1)
@@ -318,12 +318,12 @@ Point Card::LifeDisplay (int ID, Point curr_points)
 
     if(ID == 1)
     {
-        cout << "It's your first day of school and you've met a really nice girl-your first friend!" << endl;
-        cout << "You're want to play with her! What to do though?" << endl;
-        cout << "1. Play in the mud with the bugs! Girls never do that, maybe she'll like it!" << endl;
-        cout << "2. Spend the recess doing stuff she likes!" << endl;
-        cout << "3. Prank her! Spit gum in her hair while she's not looking. That'll crack everyone up." << endl;
-        cout << "4. Do nothing. Who needs friends when you've got imaginary ones?" << endl;
+        std::cout << "It's your first day of school and you've met a really nice girl-your first friend!" << endl;
+        std::cout << "You're want to play with her! What to do though?" << endl;
+        std::cout << "1. Play in the mud with the bugs! Girls never do that, maybe she'll like it!" << endl;
+        std::cout << "2. Spend the recess doing stuff she likes!" << std::endl;
+        std::cout << "3. Prank her! Spit gum in her hair while she's not looking. That'll crack everyone up." << std::endl;
+        std::cout<< "4. Do nothing. Who needs friends when you've got imaginary ones?" << std::endl;
 
         cin >> choice;
         if(choice == 1)
@@ -335,7 +335,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.GoodIncrement(1);
             points.LifeIncrement(1);
         }
-        }
+
         else if (choice == 3)
         {
             points.EvilIncrement(1);
@@ -345,14 +345,14 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.LifeIncrement(0);
         }
     }
-    if(ID == 2)
+    else if(ID == 2)
     {
-        cout << "You've entered the teenage years and with that the first instances of peer pressure." << endl;
-        cout << "A cool guy you've known for a bit offers to share a drink with you." << endl;
-        cout << "You: " << endl;
-        cout << "1. Politely decline. It's his choice to do what he wants, but it's yours too." << endl;
-        cout << "2. Accept. You've never tried it before. Not much harm in a bit right?" << endl;
-        cout << "3. Pull out your own bottle! You've been sneaking alcohol since you were 12." << endl;
+        std::cout << "You've entered the teenage years and with that the first instances of peer pressure." << std::endl;
+        std::cout << "A cool guy you've known for a bit offers to share a drink with you." << std::endl;
+        std::cout << "You: " << std::endl;
+        std::cout << "1. Politely decline. It's his choice to do what he wants, but it's yours too." << std::endl;
+        std::cout << "2. Accept. You've never tried it before. Not much harm in a bit right?" << std::endl;
+        std::cout << "3. Pull out your own bottle! You've been sneaking alcohol since you were 12." << std::endl;
 
         cin >> choice;
         if(choice == 1)
@@ -368,15 +368,15 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.DeathIncrement(1);
         }
     }
-    if(ID == 3)
+    else if(ID == 3)
     {
-        cout << "Your child has been borne! As you hold the screeching," << endl;
-        cout << "plum-like little boy in your arms, he vomits on your face." << endl;
-        cout << "You: " << endl;
-        cout << "1. Wipe off the barf and cuddle him. He's your son after all!" << endl;
-        cout << "2. Plop him into the mother's arms. It's her turn to hold him anyway." << endl;
-        cout << "3. Roar in disgust and proceed to put child up for adoption." << endl;
-        cout << "4. You knew you wanted a girl. This is why." << endl;
+        std::cout << "Your child has been borne! As you hold the screeching," << std::endl;
+        std::cout << "plum-like little boy in your arms, he vomits on your face." << std::endl;
+        std::cout << "You: " << std::endl;
+        std::cout << "1. Wipe off the barf and cuddle him. He's your son after all!" << std::endl;
+        std::cout << "2. Plop him into the mother's arms. It's her turn to hold him anyway." << std::endl;
+        std::cout << "3. Roar in disgust and proceed to put child up for adoption." << std::endl;
+        std::cout << "4. You knew you wanted a girl. This is why." << std::endl;
 
         cin >> choice;
         if(choice == 1)
@@ -395,15 +395,15 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.GoodIncrement(1);
         }
     }
-    if(ID == 4)
+    else if(ID == 4)
     {
-        cout << "You're getting your gray hairs now and it's time to retire." << endl;
-        cout << "You've worked at an office job and have made some good friends." << endl;
-        cout << "How do you want to leave your workplace?" << endl;
-        cout << "1. Enjoy the mediocre retirement party thrown by the boss and friends." << endl;
-        cout << "2. Go out with a bang-cursing your boss's hide and trashing the office." << endl;
-        cout << "3. Make sure everyone you cared about remembers you well. " << endl;
-        cout << "4. Go on a violent rampage." << endl;
+        std::cout << "You're getting your gray hairs now and it's time to retire." << std::endl;
+        std::cout << "You've worked at an office job and have made some good friends." << std::endl;
+        std::cout << "How do you want to leave your workplace?" << std::endl;
+        std::cout << "1. Enjoy the mediocre retirement party thrown by the boss and friends." << std::endl;
+        std::cout << "2. Go out with a bang-cursing your boss's hide and trashing the office." << std::endl;
+        std::cout << "3. Make sure everyone you cared about remembers you well. " << std::endl;
+        std::cout << "4. Go on a violent rampage." << std::endl;
 
         cin >> choice;
         if(choice == 1)
@@ -426,15 +426,15 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.EvilIncrement(2);
         }
     }
-    if(ID == 5)
+    else if(ID == 5)
     {
-        cout << "Your final days are approaching, but so are some of the best days of your life." << endl;
-        cout << "There's a few things you've got left to do on your bucket list. " << endl;
-        cout << "How do you want to leave this world? << endl;
-        cout << "1. Peacefully, spending time with loved ones." << endl;
-        cout << "2. Para sailing, bungee-jumping, and cross-country mountain skiing!" << endl;
-        cout << "3. Isolate yourself. The world hasn't treated you well anyway." << endl;
-        cout << "4. Go on a violent rampage." << endl;
+        std::cout << "Your final days are approaching, but so are some of the best days of your life." << std::endl;
+        std::cout << "There's a few things you've got left to do on your bucket list. " << std::endl;
+        std::cout << "How do you want to leave this world?" << std::endl;
+        std::cout << "1. Peacefully, spending time with loved ones." << std::endl;
+        std::cout << "2. Para sailing, bungee-jumping, and cross-country mountain skiing!" << std::endl;
+        std::cout << "3. Isolate yourself. The world hasn't treated you well anyway." << std::endl;
+        std::cout << "4. Go on a violent rampage." << std::endl;
 
         cin >> choice;
         if(choice == 1)
