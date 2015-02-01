@@ -295,6 +295,10 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
         {
             points.DeathIncrement(1);
         }
+    if(ID == 9)
+    {
+        std::cout << ""
+    }
 
     }
     return points;
