@@ -305,7 +305,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
             points.EvilIncrement(2);
         }
     }
-       else if (ID == 4)
+       else if (ID == 3)
         {
             std::cout << "You are going for that job interview you've always wanted." << std::endl;
             std::cout << "This is your chance to impress your employer and take a great" << std::endl;
