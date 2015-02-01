@@ -45,10 +45,10 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
     {
         cout << "You've entered the world as a newborn baby, just old enough to talk." << endl;
         cout << "Your mother leans over you, trying to get you to say \"Mama\". You say " << endl;
-        cout << "1. ****" << endl;
+        cout << "1. Poop!" << endl;
         cout << "2. Mama!" << endl;
         cout << "3. Dada!" << endl;
-        cout << "4. You begin crying!" << endl;
+        cout << "4. You begin crying." << endl;
 
         cin >> choice;
         if(choice == 1)
@@ -74,10 +74,10 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
     if(ID == 2)
     {
         std::cout << "Your teacher calls you up to do this math problem. What is 1 + 1?" << std::endl;
-        std::cout << "1. TWOOOOOOOOOOOOOO!" << std::endl;
-        std::cout << "2. Two. Only an idiot would get that question wrong." << std::endl;
+        std::cout << "1. Two, ma'am O:\)" << std::endl;
+        std::cout << "2. Two. Even a baby would know that." << std::endl;
         std::cout << "3. Two." << std::endl;
-        std::cout << "4. Window!" << std::endl;
+        std::cout << "4. Window?" << std::endl;
 
         cin >> choice;
 
@@ -102,9 +102,9 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
     {
         std::cout << "Philosophy professor gives final exam: Why is life so hard?\n";
         std::cout << "1: Because the struggle is life.\n";
-        std::cout << "2: Life is easy you're stupid.\n";
+        std::cout << "2: Life is easy!\n";
         std::cout << "3: Life is but a series of choices: People like making bad ones.\n";
-        std::cout << "4: Life sucks d**k, but never mine.\n";
+        std::cout << "4: Life is a series of unfortunate events, never benefitting me.\n";
         cin >> choice;
         if(choice == 1)
         {
@@ -220,7 +220,7 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
     {
         std::cout << "You open a door for someone, but he passes by without even thanking you! What do you do?!" << std::endl;
         std::cout << "1. Forget about it. He was probably in a hurry." << std::endl;
-        std::cout << "2. Stab him and rip open his chest, eating his beating heart with your bare hands." << std::endl;
+        std::cout << "2. Proceed to imagine fantastic scenes of retribution" << std::endl;
         std::cout << "3. Yell at the man, approaching him with a stern face. Proceed to lecture him." << std::endl;
 
         std::cin >> choice;
@@ -254,8 +254,8 @@ Point Card::LifeDisplay (int ID, Point curr_points)
         cout << "You: " << endl;
         cout << "1. Wipe off the barf and cuddle him. He's your son after all!" << endl;
         cout << "2. Plop him into the mother's arms. It's her turn to hold him anyway." << endl;
-        cout << "3. Roar in disgust and proceed to drop-kick out of window." << endl;
-        cout << "   You knew you wanted a girl. This is why." << endl;
+        cout << "3. Roar in disgust and proceed to put child up for adoption." << endl;
+        cout << "4. You knew you wanted a girl. This is why." << endl;
 
         cin >> choice;
         if(choice == 1)
@@ -280,7 +280,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
         cout << "You've worked at an office job and have made some good friends." << endl;
         cout << "How do you want to leave your workplace?" << endl;
         cout << "1. Enjoy the mediocre retirement party thrown by the boss and friends." << endl;
-        cout << "2. Go out with a bang-cursing your boss's slimy hide and trashing the office." << endl;
+        cout << "2. Go out with a bang-cursing your boss's hide and trashing the office." << endl;
         cout << "3. Make sure everyone you cared about remembers you well. " << endl;
         cout << "4. Go on a violent rampage." << endl;
 
