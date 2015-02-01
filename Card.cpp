@@ -220,7 +220,7 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
     {
         std::cout << "You open a door for someone, but he passes by without even thanking you! What do you do?!" << std::endl;
         std::cout << "1. Forget about it. He was probably in a hurry." << std::endl;
-        std::cout << "2. Stab him and rip open his chest, eating his beating heart with your bare hands. Kalima! Kalima!" << std::endl;
+        std::cout << "2. Stab him and rip open his chest, eating his beating heart with your bare hands." << std::endl;
         std::cout << "3. Yell at the man, approaching him with a stern face. Proceed to lecture him." << std::endl;
 
         std::cin >> choice;
@@ -237,58 +237,6 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
         {
             points.LifeIncrement(1);
             points.GoodIncrement(1);
-        }
-    }
-    if (ID == 3)
-    {
-        std::cout << "You're on your honeymoon and met the most beautiful person. What do you do?\n";
-        //std::cout << "\n";
-        std::cout << "1: Stay faithful. Till Death do us part.\n";
-        std::cout << "2: Death does do us part (murders partner)\n";
-        std::cout << "3: Cheat on your partner.\n";
-        std::cout << "4: Invite for a threesome. \n";
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.GoodIncrement(2);
-        }
-        else if(choice == 2)
-        {
-            points.EvilIncrement(5);
-        }
-        else if(choice == 3)
-        {
-            points.DeathIncrement(2);
-        }
-        else if (choice == 4)
-        {
-            points.LifeIncrement(1);
-        }
-    }
-    if (ID == 4)
-    {
-        std::cout << "Your loved ones are being held hostage by ISIS! You are in a U.S. missile base.\n";
-        std::cout << "What do you do?\n";
-        std::cout << "1: Save \n";
-        std::cout << "2: \n";
-        std::cout << "3: \n";
-        std::cout << "4: \n";
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.GoodIncrement(1);
-        }
-        else if(choice == 2)
-        {
-            points.LifeIncrement(2);
-        }
-        else if(choice == 3)
-        {
-            points.EvilIncrement(2);
-        }
-        else if (choice == 4)
-        {
-            points.DeathIncrement(1);
         }
     }
     return points;
