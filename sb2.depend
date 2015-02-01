@@ -1,18 +1,20 @@
 # depslib dependency file v1.0
-1422755422 source:c:\users\studentd\documents\github\sbhackslife\card.cpp
+1422789839 source:c:\users\studentd\documents\github\sbhackslife\card.cpp
 	"Card.h"
 	"Point.h"
 	<iostream>
 	<cstdlib>
 	<time.h>
+	<vector>
 
-1422747148 c:\users\studentd\documents\github\sbhackslife\card.h
+1422787547 c:\users\studentd\documents\github\sbhackslife\card.h
 	"Point.h"
 	<string>
+	<vector>
 
-1422740328 c:\users\studentd\documents\github\sbhackslife\point.h
+1422788286 c:\users\studentd\documents\github\sbhackslife\point.h
 
-1422754634 source:c:\users\studentd\documents\github\sbhackslife\main.cpp
+1422788286 source:c:\users\studentd\documents\github\sbhackslife\main.cpp
 	<iostream>
 	"Point.h"
 	"Card.h"
@@ -20,7 +22,7 @@
 	<ctime>
 	<cstdlib>
 
-1422741467 source:c:\users\studentd\documents\github\sbhackslife\point.cpp
+1422788286 source:c:\users\studentd\documents\github\sbhackslife\point.cpp
 	"Point.h"
 	<iostream>
 
