@@ -67,6 +67,7 @@ void menu()
 void initalizegame()
 {
     int card;
+    int MAX_COUNTER = 22;
 
     Card player;
     Point p_points;
@@ -92,7 +93,7 @@ void initalizegame()
 
         int i = p_points.getCounter();
 
-        if(i == 15)
+        if(i == MAX_COUNTER)
         {
             std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;
             std::cout << p_points.displayDeath() << std::endl;

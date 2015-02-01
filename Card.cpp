@@ -142,7 +142,7 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
         std::cout << "1: Because the struggle is life.\n";
         std::cout << "2: Life is easy!\n";
         std::cout << "3: Life is but a series of choices: People like making bad ones.\n";
-        std::cout << "4: Life is a series of unfortunate events, never benefitting me.\n";
+        std::cout << "4: Life is a series of unfortunate events, never benefiting me.\n";
         cin >> choice;
         if(choice == 1)
         {
@@ -297,7 +297,58 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
         }
     if(ID == 9)
     {
-        std::cout << ""
+        std::cout << "The bully on the street decides to pick on you today. You: " << std::endl;
+        std::cout << "1. Run. He's too fat to catch me!" << std::endl;
+        std::cout << "2. Tell him off. Sticks and stones may break my bones..." << std::endl;
+        std::cout << "3. Deck him in the face. He should of expected it." << std::endl;
+        std::cout << "4. Call for mom. Coward." << std::endl;
+
+        cin >> choice;
+
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if (choice == 2)
+        {
+            points.GoodIncrement(2);
+        }
+        else if (choice == 3)
+        {
+            points.DeathIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+    }
+    if (ID == 10)
+    {
+        std::cout << "Two of your good friends are fighting. It seems pretty intense. What do you do?" std::endl;
+        std::cout << "1. Talk to them one at a time. It's nice to see both sides of the problem." << std::endl;
+        std::cout << "2. Yell at both of them, explaining their faults and how stupid they are." << std::endl;
+        std::cout << "3. Do I look like a therapist to you?" << std::endl;
+        std::cout << "4. Take sides. Sorry, but one of them has to be right." << std::endl;
+
+        cin >> choice;
+
+        if(choice == 1)
+        {
+            points.GoodIncrement(3);
+        }
+        else if (choice == 2)
+        {
+            points.EvilIncrement(3);
+        }
+        else if (choice == 3)
+        {
+            points.DeathIncrement(1);
+        }
+        else if (choice == 4)
+        {
+            points.EvilIncrement(1);
+        }
+
     }
 
     }
@@ -463,7 +514,7 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
         std::cout << "On the streets someone challenged you to a race. The cops start pursuing both of you. \n";
         std::cout << "\n";
         std::cout << "1: Pull over and face Justice.\n";
-        std::cout << "2: Show the cops your Initial D.rift.\n";
+        std::cout << "2: Show the cops your Initial D. Drift.\n";
         std::cout << "3: Shove that asshole into the cops. \n";
         std::cout << "4: Accelerate over 150 mph.\n";
         cin >> choice;
