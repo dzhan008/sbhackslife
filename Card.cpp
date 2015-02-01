@@ -74,7 +74,29 @@ Point Card::PuzzleDisplay(int ID, Point curr_points)
     if(ID == 1)
     {
         std::cout << "Your teacher calls you up to do this math problem. What is 1 + 1?" << std::endl;
-        std::cout << "1. It's two, duh." << std::endl;
+        std::cout << "1. TWOOOOOOOOOOOOOO!" << std::endl;
+        std::cout << "2. Two. Only an idiot would get that question wrong." << std::endl;
+        std::cout << "3. Two." << std::endl;
+        std::cout << "4. Window!" << std::endl;
+
+        cin >> choice;
+
+        if(choice == 1)
+        {
+            points.GoodIncrement(2);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(1);
+        }
+        else if(choice == 3)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
     }
     return points;
 }
@@ -120,6 +142,9 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
         std::cout << "1. Forget about it. He was probably in a hurry." << std::endl;
         std::cout << "2. Stab him and rip open his chest, eating his beating heart with your bare hands." << std::endl;
         std::cout << "3. Yell at the man, approaching him with a stern face. Proceed to lecture him." << std::endl;
+
+        std::cin >> choice;
+
         if(choice == 1)
         {
             points.GoodIncrement(1);
