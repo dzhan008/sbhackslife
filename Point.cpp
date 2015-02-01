@@ -116,6 +116,10 @@ int Point::Ending()
     {
         std::cout << "That was odd. You died quite quickly and didn't do much in your life." << std::endl;
     }
+    else if (good < 3 && evil < 3 && death >= 5)
+    {
+        std::cout << "You're something, aren't you? Despite dying you got a taste of the good and bad." << std::endl;
+    }
     else if (evil > 3 && life >= 5)
     {
         std::cout << "Why are you alive? You've cheated the death you deserve and are probably " << std::endl;

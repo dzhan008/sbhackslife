@@ -12,7 +12,8 @@ int main()
 {
 
 
-    std::cout << "Welcome to the Judgement Day!" << std::endl;
+    std::cout << "Welcome to Judgement Day." << std::endl;
+    std::cout << "SBHacks Version 1.0." << std::endl << std::endl;
 
     menu();
 
@@ -45,14 +46,16 @@ void menu()
     }
     else if (choice == 2)
     {
-        std::cout << "Today was the day of your death. The story I tell today is not of how you died, or how you lived," << std::endl;
-        std::cout << "day in and day out. I do not need to know that. I know everything. I am everything." << std::endl;
-        std::cout << "You alone know what you did, how you lived your life...the decisions you were faced with" << std::endl;
-        std::cout << "and mistakes you made. If I were to make a judgement, and I do often, it would not be good for you." << std::endl;
-        std::cout << "But I see something in you too. You know what you did wrong, what you did right. And I've" << std::endl;
-        std::cout << "decided to give you a chance to change it. I'm going to let you go, you might feel like you're" << std::endl << std::endl;
-        std::cout << "falling. Try and make the right decisions this time, and when you're done we'll see how" << std::endl;
-        std::cout << "and where you really fall in this afterlife." << std::endl;
+        std::cout << "Today was the day of your death. The story I tell today is not of how you died," << std::endl;
+        std::cout << "or how you lived, day in and day out. I do not need to know that. I know" << std::endl;
+        std::cout << "everything. I am everything. You alone know what you did, how you lived your" << std::endl;
+        std::cout << "life...the decisions you were faced with and mistakes you made. If I were to" << std::endl;
+        std::cout << "make a judgement, and I do often, it would not be good for you. But I see" << std::endl;
+        std::cout << "something in you too. You know what you did wrong, what you did right. And" << std::endl;
+        std::cout << "I've decided to give you a chance to change it. I'm going to let you go," << std::endl;
+        std::cout << "you may feel like you're falling. Try and make the right decisions this time," << std::endl;
+        std::cout << "and when you're done we'll how and where you really fall in this afterlife." << std::endl << std::endl;
+
 
         menu();
     }
@@ -73,7 +76,6 @@ void initalizegame()
 
     while(!p_points.Dead()&& !p_points.Alive())
     {
-        std::cout << "Drawing card..." << std::endl;
         card = player.drawCard();
 
         if(card == 1)
@@ -89,8 +91,9 @@ void initalizegame()
 
             p_points = player.Life(p_points);
         }
+
         int i = p_points.getCounter();
-        std::cout << i << std::endl;
+
         if(i == 15)
         {
             std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;

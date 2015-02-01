@@ -24,6 +24,7 @@ Point Card::Puzzle(Point curr_point)
     {
         std::cout << "Drawing card..." << std::endl;
         curr_point = PuzzleDisplay(ID, curr_point);
+        std::cout << "--------------------" << std::endl;
         puzzlecheck.push_back(ID);
         curr_point.CheckScenario(1);
     }
@@ -38,6 +39,7 @@ Point Card::Crisis(Point curr_point)
     {
         std::cout << "Drawing card..." << std::endl;
         curr_point = CrisisDisplay(ID, curr_point);
+        std::cout << "--------------------" << std::endl;
         crisischeck.push_back(ID);
         curr_point.CheckScenario(1);
     }
@@ -53,6 +55,7 @@ Point Card::Life(Point curr_point)
     {
         std::cout << "Drawing card..." << std::endl;
         curr_point = LifeDisplay(ID, curr_point);
+        std::cout << "--------------------" << std::endl;
         lifecheck.push_back(ID);
         curr_point.CheckScenario(1);
     }
