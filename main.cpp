@@ -79,23 +79,27 @@ void initalizegame()
 
         if(card == 1)
         {
-            std::cout << "Drawing card..." << std::endl;
             p_points = player.Puzzle(p_points);
-
         }
         else if(card == 2)
         {
-            std::cout << "Drawing card..." << std::endl;
             p_points = player.Crisis(p_points);
         }
         else if(card == 3)
         {
-            std::cout << "Drawing card..." << std::endl;
             p_points = player.Life(p_points);
         }
-        if(p_points.getCounter() == 3)
+        int i = p_points.getCounter();
+        std::cout << i << std::endl;
+        if(i == 15)
         {
+            std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;
+            std::cout << p_points.displayDeath() << std::endl;
+            std::cout << p_points.displayEvil() << std::endl;
+            std::cout << p_points.displayGood() << std::endl;
+            std::cout << p_points.displayLife() << std::endl;
             p_points.Ending();
+            return;
         }
     }
     std::cout << std::endl << "Game Over! Here is your final score: " << std::endl;

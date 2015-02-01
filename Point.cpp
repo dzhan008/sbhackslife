@@ -7,6 +7,7 @@ Point::Point()
     death = 0;
     good = 0;
     evil = 0;
+    counter = 0;
 }
 void Point::LifeIncrement(int inc)
 {
