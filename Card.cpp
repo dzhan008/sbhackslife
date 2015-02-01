@@ -220,7 +220,7 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
     {
         std::cout << "You open a door for someone, but he passes by without even thanking you! What do you do?!" << std::endl;
         std::cout << "1. Forget about it. He was probably in a hurry." << std::endl;
-        std::cout << "2. Proceed to imagine fantastic scenes of retribution" << std::endl;
+        std::cout << "2. Hope that he will rue the day that he insulted your very existence." << std::endl;
         std::cout << "3. Yell at the man, approaching him with a stern face. Proceed to lecture him." << std::endl;
 
         std::cin >> choice;
@@ -239,6 +239,84 @@ Point Card::CrisisDisplay(int ID, Point  curr_points)
             points.GoodIncrement(1);
         }
     }
+    if (ID == 3)
+    {
+        std::cout << "You are on a honeymoon. You see the most beautiful person. What do you do?\n";
+        //std::cout << "\n";
+        std::cout << "1: Stay faithful. Till Death do us part.\n";
+        std::cout << "2: Death does do us part. Indeed.\n";
+        std::cout << "3: Cheat.\n";
+        std::cout << "4: Invite for a hot night together, the three of us.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(2);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(5);
+        }
+        else if(choice == 3)
+        {
+            points.DeathIncrement(2);
+        }
+        else if (choice == 4)
+        {
+            points.LifeIncrement(1);
+        }
+    }
+    if (ID == 4)
+    {
+        std::cout << "Loved ones taken hostage by ISIS. You are at a US missile base negotiating.\n";
+        //std::cout << "\n";
+        std::cout << "1: Give ISIS what they want in exchange for their safety.\n";
+        std::cout << "2: Their fault for going to the Middle East.\n";
+        std::cout << "3: Muricans don't negotiate with terrorists. Launch missiles!\n";
+        std::cout << "4: Travel to the Middle East lone wolf style.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.LifeIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(2);
+        }
+        else if(choice == 3)
+        {
+            points.EvilIncrement(4);
+        }
+        else if (choice == 4)
+        {
+            points.DeathIncrement(1);
+        }
+    }
+    if (ID == 5)
+    {
+        std::cout << "This is the final standoff with your rival. Only one will leave this alive.\n";
+        //std::cout << "\n";
+        std::cout << "1: Only thing left to do is win.\n";
+        std::cout << "2: Murder him, defile his corpse and return it to his family.\n";
+        std::cout << "3: Convince him to stop.\n";
+        std::cout << "4: Draw.\n";
+        cin >> choice;
+        if(choice == 1)
+        {
+            points.GoodIncrement(1);
+        }
+        else if(choice == 2)
+        {
+            points.EvilIncrement(3);
+        }
+        else if(choice == 3)
+        {
+            points.DeathIncrement(2);
+        }
+        else if (choice == 4)
+        {
+            points.LifeIncrement(1);
+        }
+    }
     return points;
 }
 
@@ -246,147 +324,7 @@ Point Card::LifeDisplay (int ID, Point curr_points)
 {
     int choice;
     Point points = curr_points;
-    if(ID == 1)
-    {
-        cout << "It's your first day of school and you've met a really nice girl-your first friend!" << endl;
-        cout << "You're want to play with her! What to do though?" << endl;
-        cout << "1. Play in the mud with the bugs! Girls never do that, maybe she'll like it!" << endl;
-        cout << "2. Spend the recess doing stuff she likes!" << endl;
-        cout << "3. Prank her! Spit gum in her hair while she's not looking. That'll crack everyone up." << endl;
-        cout << "4. Do nothing. Who needs friends when you've got imaginary ones?" << endl;
 
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.LifeIncrement(1);
-        }
-        else if (choice == 2)
-        {
-            points.GoodIncrement(1);
-            points.LifeIncrement(1);
-        }
-        }
-        else if (choice == 3)
-        {
-            points.EvilIncrement(1);
-        }
-        else if (choice == 4)
-        {
-            points.LifeIncrement(0);
-        }
-    }
-    if(ID == 2)
-    {
-        cout << "You've entered the teenage years and with that the first instances of peer pressure." << endl;
-        cout << "A cool guy you've known for a bit offers to share a drink with you." << endl;
-        cout << "You: " << endl;
-        cout << "1. Politely decline. It's his choice to do what he wants, but it's yours too." << endl;
-        cout << "2. Accept. You've never tried it before. Not much harm in a bit right?" << endl;
-        cout << "3. Pull out your own bottle! You've been sneaking alcohol since you were 12." << endl;
-
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.GoodIncrement(1);
-        }
-        else if (choice == 2)
-        {
-            points.LifeIncrement(1);
-        }
-        else if (choice == 3)
-        {
-            points.DeathIncrement(1);
-        }
-    }
-    if(ID == 3)
-    {
-        cout << "Your child has been borne! As you hold the screeching," << endl;
-        cout << "plum-like little boy in your arms, he vomits on your face." << endl;
-        cout << "You: " << endl;
-        cout << "1. Wipe off the barf and cuddle him. He's your son after all!" << endl;
-        cout << "2. Plop him into the mother's arms. It's her turn to hold him anyway." << endl;
-        cout << "3. Roar in disgust and proceed to put child up for adoption." << endl;
-        cout << "4. You knew you wanted a girl. This is why." << endl;
-
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.LifeIncrement(1);
-            points.GoodIncrement(1);
-        }
-        else if (choice == 2)
-        {
-            points.EvilIncrement(1);
-        }
-        else if (choice == 3)
-        {
-            points.DeathIncrement(1);
-            points.EvilIncrement(2);
-            points.GoodIncrement(1);
-        }
-    }
-    if(ID == 4)
-    {
-        cout << "You're getting your gray hairs now and it's time to retire." << endl;
-        cout << "You've worked at an office job and have made some good friends." << endl;
-        cout << "How do you want to leave your workplace?" << endl;
-        cout << "1. Enjoy the mediocre retirement party thrown by the boss and friends." << endl;
-        cout << "2. Go out with a bang-cursing your boss's hide and trashing the office." << endl;
-        cout << "3. Make sure everyone you cared about remembers you well. " << endl;
-        cout << "4. Go on a violent rampage." << endl;
-
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.GoodIncrement(1);
-        }
-        else if (choice == 2)
-        {
-            points.EvilIncrement(1);
-            points.LifeIncrement(1);
-        }
-        else if (choice == 3)
-        {
-            points.GoodIncrement(1);
-            points.LifeIncrement(1);
-        }
-        else if (choice == 4)
-        {
-            points.DeathIncrement(1);
-            points.EvilIncrement(2);
-        }
-    }
-    if(ID == 5)
-    {
-        cout << "Your final days are approaching, but so are some of the best days of your life." << endl;
-        cout << "There's a few things you've got left to do on your bucket list. " << endl;
-        cout << "How do you want to leave this world? << endl;
-        cout << "1. Peacefully, spending time with loved ones." << endl;
-        cout << "2. Para sailing, bungee-jumping, and cross-country mountain skiing!" << endl;
-        cout << "3. Isolate yourself. The world hasn't treated you well anyway." << endl;
-        cout << "4. Go on a violent rampage." << endl;
-
-        cin >> choice;
-        if(choice == 1)
-        {
-            points.GoodIncrement(1);
-            points.LifeIncrement(1);
-        }
-        else if (choice == 2)
-        {
-            points.DeathIncrement(3);
-            points.LifeIncrement(1);
-        }
-        else if (choice == 3)
-        {
-            points.DeathIncrement(1);
-        }
-        else if (choice == 4)
-        {
-            points.DeathIncrement(5);
-            points.EvilIncrement(1);
-        }
-    }
 
 
     return points;
