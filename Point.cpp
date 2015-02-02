@@ -130,6 +130,4 @@ int Point::Ending()
         std::cout << "It's a good thing you died, you terrible, terrible person." << std::endl;
     }
 
-    return 0;
-
 }

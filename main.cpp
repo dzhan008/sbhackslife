@@ -101,6 +101,7 @@ void initalizegame()
             std::cout << p_points.displayGood() << std::endl;
             std::cout << p_points.displayLife() << std::endl;
             p_points.Ending();
+            system("PAUSE");
             return;
         }
 
@@ -115,7 +116,8 @@ void initalizegame()
     std::cout << p_points.displayLife() << std::endl << std::endl;
 
     p_points.Ending();
-
+    system("PAUSE");
+    return;
 }
 
 
